@@ -11,3 +11,7 @@ public class PersonalFinanceTrackerApplication {
 	}
 
 }
+
+
+
+// Now we need to implement Angular and Vue.Js to get something rendering on the front
