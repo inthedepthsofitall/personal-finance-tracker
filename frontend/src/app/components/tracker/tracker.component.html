@@ -1,0 +1,14 @@
+<p>tracker works!</p>
+<h2>Expense Tracker</h2>
+<form (ngSubmit)="addExpense(expenseName.value, expenseAmount.value)">
+  <input #expenseName placeholder="Expense Name" required />
+  <input #expenseAmount type="number" placeholder="Amount" required />
+  <button type="submit">Add Expense</button>
+</form>
+
+<h3>Expenses:</h3>
+<ul>
+  <li *ngFor="let expense of expenses">
+    {{ expense.name }}: ${{ expense.amount }}
+  </li>
+</ul>

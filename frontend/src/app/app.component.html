@@ -1,0 +1,49 @@
+<main class="main">
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/dashboard">Tracker</a></li>
+      <li><a routerLink="/education">Education</a></li>
+      <!-- Add more links as needed -->
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1>Welcome to Your Personal Finance Tracker</h1>
+    <p>Manage your expenses and track your budget efficiently.</p>
+  </div>
+
+  <router-outlet></router-outlet> <!-- This is where routed components will be displayed -->
+</main>
+
+<style>
+  /* Add your styles here */
+  nav {
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav li {
+    display: inline;
+    margin-right: 1rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    text-align: center;
+    margin-top: 2rem;
+  }
+</style>
