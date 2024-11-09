@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router'; 
+
 @Component({
-  selector: 'app-education',
+  selector: 'app-home',
   standalone: true,
-  imports:[CommonModule, RouterModule],
-  templateUrl: './education.component.html',
-  styleUrl: './education.component.css'
+  imports: [CommonModule, RouterModule], 
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class EducationComponent {
+export class HomeComponent {
   tabs = [
     { name: 'Home', path: '/' },
     { name: 'Tracker', path: '/tracker' },

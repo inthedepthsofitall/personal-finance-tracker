@@ -1,13 +1,27 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router'; 
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button'; 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html', // Ensure this file exists
-  styleUrls: ['./dashboard.component.css']  // Correct path to the CSS file
+  standalone: true,
+  imports: [CommonModule, RouterModule, MatToolbarModule, MatButtonModule], 
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  // Add any component logic here
+  tabs: { name: string; path: string }[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Tracker', path: '/tracker' },
+    { name: 'Education', path: '/education' },
+  ];
+
+  constructor() {
+    console.log("Tabs: ", this.tabs); // Check if tabs are being set correctly
+  }
+
+  logLinkClick(tabName: string) {
+    console.log(`Navigating to: ${tabName}`);
+  }
 }
-
-
-// let start with specific tabs we want to display

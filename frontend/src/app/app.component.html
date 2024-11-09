@@ -1,20 +1,12 @@
 <main class="main">
-  <nav>
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/dashboard">Tracker</a></li>
-      <li><a routerLink="/education">Education</a></li>
-      <!-- Add more links as needed -->
-    </ul>
-  </nav>
-
+  <app-dashboard></app-dashboard> <!-- This is where the dashboard component is rendered -->
+  <router-outlet></router-outlet> 
   <div class="content">
     <h1>Welcome to Your Personal Finance Tracker</h1>
     <p>Manage your expenses and track your budget efficiently.</p>
   </div>
-
-  <router-outlet></router-outlet> <!-- This is where routed components will be displayed -->
 </main>
+
 
 <style>
   /* Add your styles here */

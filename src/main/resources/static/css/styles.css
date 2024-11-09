@@ -1,0 +1,12 @@
+/* styles.css */
+
+/* Example CSS rule */
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif; /* Font for the body */
+}
+
+h1 {
+    color: #333; /* Dark grey color for the heading */
+    text-align: center; /* Center the heading */
+}

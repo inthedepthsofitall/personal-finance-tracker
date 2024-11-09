@@ -1,3 +1,11 @@
-<p>dashboard works!</p>
+<h1>Dashboard</h1>
+<mat-toolbar color="primary">
+  <span>Dashboard Navigation</span>
+  <span class="spacer"></span> <!-- This will push buttons to the right -->
+  <button mat-button *ngFor="let tab of tabs" [routerLink]="tab.path">
+    {{ tab.name }}
+  </button>
+</mat-toolbar>
 
-<h1>Going to play with this file accordingly</h1>
+<router-outlet></router-outlet>
+

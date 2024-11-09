@@ -1,1 +1,11 @@
-<p>education works!</p>
+<h1>Education</h1>
+<nav>
+    <ul>
+      <li *ngFor="let tab of tabs">
+        <a [routerLink]="tab.path" (click)="logLinkClick(tab.name)">{{ tab.name }}</a>
+      </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
+
+

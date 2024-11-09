@@ -1,6 +1,13 @@
-<p>tracker works!</p>
 <h2>Expense Tracker</h2>
-<form (ngSubmit)="addExpense(expenseName.value, expenseAmount.value)">
+<nav>
+  <ul>
+    <li *ngFor="let tab of tabs">
+      <a [routerLink]="tab.path">{{ tab.name }}</a>
+    </li>
+  </ul>
+</nav>
+
+<form (ngSubmit)="addExpense(expenseName.value, +expenseAmount.value)">
   <input #expenseName placeholder="Expense Name" required />
   <input #expenseAmount type="number" placeholder="Amount" required />
   <button type="submit">Add Expense</button>
